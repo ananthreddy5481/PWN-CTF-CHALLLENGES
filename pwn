@@ -108,6 +108,8 @@ pwn.college{QHnUnK60DGFTkeQ-q5Yxb7PZcij.QXycjMzwyM0YTN0EzW}
 
 
 LEVEL 12:-
+https://pwn.college/fundamentals/talking-web/
+
 
 
 
