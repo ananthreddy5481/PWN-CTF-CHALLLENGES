@@ -59,5 +59,52 @@ FLAG   --  pwn.college{0Hih0uMmEFRa6P7bNy1bCXNesMR.QX1cjMzwyM0YTN0EzW}
 
 
 LEVEL 7 :-
-https://pwn.college/fundamentals/talking-web/
+find the endpoint and then activate the web server.
+
+then make a GET command using the curl as following CURL HTTP://CHALLENGES.LOCALHOST:80/AUTHENTICATE.
+
+FLAG -- pwn.college{oZXoGGMzxAaVeOuXXpntS5zH802.QX0cjMzwyM0YTN0EzW}
+
+LEVEL 8:-
+
+create a python file in the server with using the requests and run that in the terminal to get the total html.
+
+PYTHON CODE:-
+IMPORT REQUESTS
+P=("HTTP://CHALLENGE.LOCALHOST/ENTRY")
+PRINT(P.TEXT)
+
+pwn.college{8RV-epu6ijm0ljrZrifgzsC0gzi.QX2cjMzwyM0YTN0EzW}
+
+
+LEVEL 9 :-
+
+find the http header that the site is allowing in the line app.config["server name"]="wargame.nexus"
+
+here wargame.nexus is the new approved wargame.nexus
+
+then write python code.
+
+pwn.college{UzsKIkSgM82LHhG33gwJ9mkWS2R.QXzcjMzwyM0YTN0EzW}
+
+
+LEVEL 10 :-
+
+header setting using the curl : curl -H "Header-name : header-value" website url.  in our case header_name -- Host and the name is in the webserver backend code.
+
+pwn.college{UT6OYfZxnWVn-smMwaC4imP-Z9D.QXxcjMzwyM0YTN0EzW}
+
+
+level 11:-
+use the curl http://challenge.localhost/gateway so that it will reject and it will give the host name that it will accept and then using the host make the request using the netcat.
+
+netcat command:
+nc challenge.localhost 80 
+GET /gateway HTTP/1.1
+hOST: THE HOST THAT WE GOT AS OUTPUT
+
+pwn.college{QHnUnK60DGFTkeQ-q5Yxb7PZcij.QXycjMzwyM0YTN0EzW}
+
+
+
 
