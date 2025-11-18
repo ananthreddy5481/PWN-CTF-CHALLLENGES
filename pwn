@@ -79,31 +79,35 @@ pwn.college{8RV-epu6ijm0ljrZrifgzsC0gzi.QX2cjMzwyM0YTN0EzW}
 
 LEVEL 9 :-
 
-find the http header that the site is allowing in the line app.config["server name"]="wargame.nexus"
+->find the http header that the site is allowing in the line app.config["server name"]="wargame.nexus"
 
-here wargame.nexus is the new approved wargame.nexus
+->here wargame.nexus is the new approved wargame.nexus
 
-then write python code.
+->then write python code.
 
 pwn.college{UzsKIkSgM82LHhG33gwJ9mkWS2R.QXzcjMzwyM0YTN0EzW}
 
 
 LEVEL 10 :-
 
-header setting using the curl : curl -H "Header-name : header-value" website url.  in our case header_name -- Host and the name is in the webserver backend code.
+->header setting using the curl : curl -H "Header-name : header-value" website url.  in our case header_name -- Host and the name is in the webserver backend code.
 
 pwn.college{UT6OYfZxnWVn-smMwaC4imP-Z9D.QXxcjMzwyM0YTN0EzW}
 
 
-level 11:-
-use the curl http://challenge.localhost/gateway so that it will reject and it will give the host name that it will accept and then using the host make the request using the netcat.
+LEVEL 11:-
+->firstly see the web server code then you will find the required server name that is : "websec.fr" .   
+->using that make a curl statement to see the request headers that we send :::      curl -v -H "Host: websec.fr"http://challenge.localhost/gateway
 
-netcat command:
-nc challenge.localhost 80 
-GET /gateway HTTP/1.1
-hOST: THE HOST THAT WE GOT AS OUTPUT
+->netcat command:
+->nc challenge.localhost 80 
+->GET /gateway HTTP/1.1
+->hOST: THE HOST THAT WE GOT AS OUTPUT
 
 pwn.college{QHnUnK60DGFTkeQ-q5Yxb7PZcij.QXycjMzwyM0YTN0EzW}
+
+
+LEVEL 12:-
 
 
 
