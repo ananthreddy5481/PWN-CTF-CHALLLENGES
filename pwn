@@ -1,3 +1,4 @@
+https://pwn.college/fundamentals/talking-web/
 LEVEL-1 :-
 
 /challenge/server - starting the web server so that it listens our call.
@@ -61,7 +62,7 @@ FLAG   --  pwn.college{0Hih0uMmEFRa6P7bNy1bCXNesMR.QX1cjMzwyM0YTN0EzW}
 LEVEL 7 :-
 find the endpoint and then activate the web server.
 
-then make a GET command using the curl as following CURL HTTP://CHALLENGES.LOCALHOST:80/AUTHENTICATE.
+then make a GET command using the curl as following CURL "HTTP://CHALLENGES.LOCALHOST:80/AUTHENTICATE".
 
 FLAG -- pwn.college{oZXoGGMzxAaVeOuXXpntS5zH802.QX0cjMzwyM0YTN0EzW}
 
@@ -108,8 +109,36 @@ pwn.college{QHnUnK60DGFTkeQ-q5Yxb7PZcij.QXycjMzwyM0YTN0EzW}
 
 
 LEVEL 12:-
-https://pwn.college/fundamentals/talking-web/
+--> find the endpoint by opening the server code.
+--> run the server.
+--> access the site using the nc    nc challenge.localhost 80
+--> then make a get statement like this GET /qualify%20task%20attempt HTTP/1.1  Host: challenge.localhost
 
+pwn.college{Qk-jS5H7BLrtGvfi_3w01VjmeJT.QX5cjMzwyM0YTN0EzW}
+
+LEVEL 13:-
+--> find the endpoint from the server and then search for the query parameters and parameter values.
+--> make a nc command and access the site then make a GET request in the following way 
+
+GET /authenticate(endpoint)?security(queryparameter)=quetywb(queryparametervalue) HTTP/1.1
+--> in this level host checking is enabled in the backed so add HOST name after the get request.
+pwn.college{ICbdHqae1_1fntlLCmjN8NOdph9.QXwgjMzwyM0YTN0EzW}
+
+
+
+LEVEL 14:-
+-->same like above find the end point.
+-->in the get statement just make the more than one query checks by using the "&" in the middle of the each query.
+pwn.college{sjMYIYTHkJTr8lfXh_5vBSlUfVF.QX0gjMzwyM0YTN0EzW}
+
+LEVEL 15:-
+-->get the endpoint and query parameters and their values.
+-->curl "http://challenge.localhost/qualify?hash=neinrg&security_token=erhet&verify=gererb" 
+here the double quotes are required to recongnise the function of the special charecters(?,=) in the following url.
+pwn.college{gg63K1mef_UA7KgwcvB8eYgsi7D.QXzgjMzwyM0YTN0EzW}
+
+LEVEL 16:-
+-->
 
 
 
