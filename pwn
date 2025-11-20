@@ -138,7 +138,21 @@ here the double quotes are required to recongnise the function of the special ch
 pwn.college{gg63K1mef_UA7KgwcvB8eYgsi7D.QXzgjMzwyM0YTN0EzW}
 
 LEVEL 16:-
--->
+-->get the endpoint and data input that the webserver is expecting is in the form data that is visible in the line flask.request.form.get 
+that line tells that we should use the form data to give the input instead of the query strings that we use in the GET method.
+the query strings are visible in the url so to avoid that we need to send that in the dorm data.
+
+curl -X POST -d "key=ozgvqkes" "http://challenge.localhost/hack"
+
+for the query string submission we will get the requests.args  (arguments)
+pwn.college{gYveIg8B8jx2rx5DHGhNDDIyJ0l.QX2gjMzwyM0YTN0EzW}
+
+LEVEL 17:-
+
+
+
+
+
 
 
 
