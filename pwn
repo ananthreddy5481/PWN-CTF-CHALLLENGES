@@ -190,8 +190,26 @@ Host: challenge.localhost
 pwn.college{oobULde-pmeSXwujhKFHcPSPtdD.QX5kjMzwyM0YTN0EzW}
 
 level 24:-
+in this we were using the curl so in the curl there are two techniques:
+1)using the -L this will directly redirect the link that url is directing.
+2)another is normal directly using curl normally it will show the redirecting link and then we should make request using the given endpoint.
+the curl command is:
 
+curl -L "http://challenge.localhost//"   ---> this will directly give the redirected link.
 
+pwn.college{kvKZRMTe3pcBUn-a7jN9JgNPlZV.QX4kjMzwyM0YTN0EzW}
+
+level 25:-
+
+in this it is uisng the python and python will directly shows the final results of the redirection.
+just give the get requests 
+python
+>>import requests
+>>p = requests.get("http://challenge.localhost//")
+>>print(p.text)
+pwn.college{wnPHHa5KYKRQ9qKSoYYsTM3yI7d.QXwAzMzwyM0YTN0EzW}
+
+level 26:-
 
 
 
