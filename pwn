@@ -147,7 +147,17 @@ curl -X POST -d "key=ozgvqkes" "http://challenge.localhost/hack"
 for the query string submission we will get the requests.args  (arguments)
 pwn.college{gYveIg8B8jx2rx5DHGhNDDIyJ0l.QX2gjMzwyM0YTN0EzW}
 
-LEVEL 17:-
+LEVEL 21:-
+
+open the challenge there we can get the endpoint and and the parameters that needed for the input.then run the challenge.
+
+then open the other terminal to make the curl POST request.the following command is 
+ curl -X POST -d "access=rdhrth" -d "auth_soc=nrgbr" -d "challenge=dherb" "http://challenge.localhost/endpoint"
+                                            (or)
+curl -X POST -d "access=drheb&auth_socket=erhetb&challenge=fgbrmn" "http://challenge.localhost/endpoint"
+
+
+
 
 
 
