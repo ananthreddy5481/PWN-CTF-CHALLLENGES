@@ -138,14 +138,51 @@ here the double quotes are required to recongnise the function of the special ch
 pwn.college{gg63K1mef_UA7KgwcvB8eYgsi7D.QXzgjMzwyM0YTN0EzW}
 
 LEVEL 16:-
+--->run the challenge server in the terminal and then open the form then navigate to the url and form is shown fill it with the
+form data that is in the webserver.
+
+pwn.college{eronBbeoRENBnvehn.repbnm0erinbbe0bmetbea_btbAFVsv}
+
+LEVEL 17:-
 -->get the endpoint and data input that the webserver is expecting is in the form data that is visible in the line flask.request.form.get 
 that line tells that we should use the form data to give the input instead of the query strings that we use in the GET method.
-the query strings are visible in the url so to avoid that we need to send that in the dorm data.
+the query strings are visible in the url so to avoid that we need to send that in the form data.
 
 curl -X POST -d "key=ozgvqkes" "http://challenge.localhost/hack"
 
 for the query string submission we will get the requests.args  (arguments)
 pwn.college{gYveIg8B8jx2rx5DHGhNDDIyJ0l.QX2gjMzwyM0YTN0EzW}
+
+LLEVEL 18:-
+get the endpoint of the challenge and run the server.
+then run the netcat command.
+nc challenge.localhost 80
+POST /endpoint HTTP/1.1
+content-type: application/x-www-form-urlencoded
+content-length: length of the entry data
+
+enter the data to be transfered.
+
+pwn.college{esnowinv.AHiegn_egerhAFEvrgEGvregerh.}
+
+LEVEL 19:-
+get the endpoint then run the server.
+in the other terminal run the python then code the python code requests there
+run import requests
+P="http://challenge.localhost:80/endpoint"
+data={"data-name" : "data-value"}
+answer=requests.post(revice,data=data)
+print(answer.text)
+
+pwn.college{ivhowi13vohr339vere58ebdihCN35_HR4.EV24jf}
+
+LEVEL 20:-
+in this level we need to write the javascript that we are directly eastblishing
+the comunication with the site without actual forms. the java scipt is :
+
+f=document.createElement("form");f.method="POST";f.action="http://challenge.localhost:80/task";i=document.createElement("input");i.name="flag";i.value="test";f.appendChild(i);document.body.appendChild(f);f.submit();
+
+then get the flag.
 
 LEVEL 21:-
 
