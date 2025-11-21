@@ -191,17 +191,6 @@ LEVEL 17:-
 
 
 
-var f = document.createElement("form");
-f.method = "POST";
-f.action = "/task";
-var i = document.createElement("input");
-i.name = "flag";
-i.value = "test";
-f.appendChild(i);
-document.body.appendChild(f);
-f.submit();
-
-
 
 
 
