@@ -157,11 +157,39 @@ then open the other terminal to make the curl POST request.the following command
 curl -X POST -d "access=drheb&auth_socket=erhetb&challenge=fgbrmn" "http://challenge.localhost/endpoint"
 
 
+pwn.college{UKGkLvvHMKAgG-e7bc1aZggxtC0.QX5gjMzwyM0YTN0EzW}
 
 
+level 22:-
+firstly open the server and check for the form data and rnd point and start the web server.
 
+the nc POST request for multiple parameters is as follows:
+nc challenge.localhost 80
+POST /gate HTTP/1.1
+Host: challenge.localhost
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 76
 
+then the parameters divided by the "&" without the spaces.
 
+pwn.college{ENLvOFpKCQwhhBQvtzl0EpuGPaF.QXwkjMzwyM0YTN0EzW}
+
+level 23:-
+
+open the web server backend code in that we can see the first url and point and
+then using that new endpoint make a new get request using the new end make another get request.
+ nc challenge.localhost 80
+GET / HTTP/1.1
+Host: challenge.localhost
+
+then you will get the new endpoint as saying that redirect.
+nc challenge.localhost 80
+GET newendpoint HTTP/1.1
+Host: challenge.localhost
+
+pwn.college{oobULde-pmeSXwujhKFHcPSPtdD.QX5kjMzwyM0YTN0EzW}
+
+level 24:-
 
 
 
