@@ -1,7 +1,7 @@
 https://pwn.college/fundamentals/talking-web/
 LEVEL-1 :-
 
-/challenge/server - starting the web server so that it listens our call.
+/challenge/server - starting the  server so that it listens our call.
 
 it listens to the call on the  http://challenge.localhost:80 so then it will give the flag.
 
@@ -10,7 +10,7 @@ FLAG   ---   pwn.college{kg2HyeCJ7UxevNi0uzqrxcvLzjh.0lMxgDNxwyM0YTNOEzW}
 
 LEVEL 2 :-
 
-firstly open the flask code in the webserver CAT /CHALLENGE/SERVER.
+firstly open the flask code in the server CAT /CHALLENGE/SERVER.
 
 in the code search for the endpoint and then join it to the url to navigate to the flast.  END POINT - /check that is in the line @app.route("/check"....) .
 
@@ -36,7 +36,7 @@ FLAG -- pwn.college{Y0vZKMMSH6XqgUsHFLFvbktPIBX.0VNxgDNxwyM0YTN0EzW}
 
 LEVEL 5 :-
 
-turn on the webserver in the terminal and open another terminal to communicate with the webserver using the netcat.
+turn on the server in the terminal and open another terminal to communicate with the server using the netcat.
 
 first running the webserver will give the address of the server like challenge.localhost with the port of 80.
 
@@ -60,7 +60,7 @@ FLAG   --  pwn.college{0Hih0uMmEFRa6P7bNy1bCXNesMR.QX1cjMzwyM0YTN0EzW}
 
 
 LEVEL 7 :-
-find the endpoint and then activate the web server.
+find the endpoint and then activate the server.
 
 then make a GET command using the curl as following CURL "HTTP://CHALLENGES.LOCALHOST:80/AUTHENTICATE".
 
@@ -97,7 +97,7 @@ pwn.college{UT6OYfZxnWVn-smMwaC4imP-Z9D.QXxcjMzwyM0YTN0EzW}
 
 
 LEVEL 11:-
-->firstly see the web server code then you will find the required server name that is : "websec.fr" .   
+->firstly see the server code then you will find the required server name that is : "websec.fr" .   
 ->using that make a curl statement to see the request headers that we send :::      curl -v -H "Host: websec.fr"http://challenge.localhost/gateway
 
 ->netcat command:
@@ -144,7 +144,7 @@ form data that is in the webserver.
 pwn.college{eronBbeoRENBnvehn.repbnm0erinbbe0bmetbea_btbAFVsv}
 
 LEVEL 17:-
--->get the endpoint and data input that the webserver is expecting is in the form data that is visible in the line flask.request.form.get 
+-->get the endpoint and data input that the server is expecting is in the form data that is visible in the line flask.request.form.get 
 that line tells that we should use the form data to give the input instead of the query strings that we use in the GET method.
 the query strings are visible in the url so to avoid that we need to send that in the form data.
 
@@ -213,7 +213,7 @@ pwn.college{ENLvOFpKCQwhhBQvtzl0EpuGPaF.QXwkjMzwyM0YTN0EzW}
 
 level 23:-
 
-open the web server backend code in that we can see the first url and point and
+open the server backend code in that we can see the first url and point and
 then using that new endpoint make a new get request using the new end make another get request.
  nc challenge.localhost 80
 GET / HTTP/1.1
