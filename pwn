@@ -23,7 +23,7 @@ LEVEL 3 :-
 
 the flag is hidden form the website interface by changing into the comment of the html code for the website interface.
 
-open the page source to find the comment.
+open the page source to find the comment. (in the browser right click)
 
 FLAG ---  pwn.college{Q04knrm8_8BGZp9egGFwFgo7-Bc.0FNxgDNxwyM0YTN0EzW}
 
@@ -72,7 +72,7 @@ create a python file in the server with using the requests and run that in the t
 
 PYTHON CODE:-
 IMPORT REQUESTS
-P=("HTTP://CHALLENGE.LOCALHOST/ENTRY")
+P=requests.get("HTTP://CHALLENGE.LOCALHOST/ENTRY")
 PRINT(P.TEXT)
 
 pwn.college{8RV-epu6ijm0ljrZrifgzsC0gzi.QX2cjMzwyM0YTN0EzW}
@@ -82,7 +82,7 @@ LEVEL 9 :-
 
 ->find the http header that the site is allowing in the line app.config["server name"]="wargame.nexus"
 
-->here wargame.nexus is the new approved wargame.nexus
+->here wargame.nexus is the new approved hostname.
 
 ->then write python code.
 
@@ -139,7 +139,7 @@ pwn.college{gg63K1mef_UA7KgwcvB8eYgsi7D.QXzgjMzwyM0YTN0EzW}
 
 LEVEL 16:-
 --->run the challenge server in the terminal and then open the form then navigate to the url and form is shown fill it with the
-form data that is in the webserver.
+form data that is in the server.
 
 pwn.college{eronBbeoRENBnvehn.repbnm0erinbbe0bmetbea_btbAFVsv}
 
@@ -171,7 +171,7 @@ in the other terminal run the python then code the python code requests there
 run import requests
 P="http://challenge.localhost:80/endpoint"
 data={"data-name" : "data-value"}
-answer=requests.post(revice,data=data)
+answer=requests.post(P,data=data)
 print(answer.text)
 
 pwn.college{ivhowi13vohr339vere58ebdihCN35_HR4.EV24jf}
