@@ -68,7 +68,7 @@ FLAG -- pwn.college{oZXoGGMzxAaVeOuXXpntS5zH802.QX0cjMzwyM0YTN0EzW}
 
 LEVEL 8:-
 
-create a python file in the server with using the requests and run that in the terminal to get the total html.
+open the python window in the terminal.
 
 PYTHON CODE:-
 IMPORT REQUESTS
