@@ -80,7 +80,7 @@ pwn.college{8RV-epu6ijm0ljrZrifgzsC0gzi.QX2cjMzwyM0YTN0EzW}
 
 LEVEL 9 :-
 
-->find the http header that the site is allowing in the line app.config["server name"]="wargame.nexus"
+->find the http host header that the site is allowing in the line app.config["server name"]="wargame.nexus"
 
 ->here wargame.nexus is the new approved hostname.
 
