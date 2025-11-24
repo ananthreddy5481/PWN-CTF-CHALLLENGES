@@ -247,12 +247,74 @@ python
 pwn.college{wnPHHa5KYKRQ9qKSoYYsTM3yI7d.QXwAzMzwyM0YTN0EzW}
 
 level 26:-
+in this level the server is not local like we do not need to run the server(/challenge/server).
+use the curl command to see the cookie that is being set 
+curl -v "http://challenge.localhost"    it will give the cookie value in the setcookie line.
+curl --cookie "(cookiename"=(cookievarible) http://challenge.localhost  --> this will give the answer.
+pwn.college{U8xsBDkKHD4OC1McZAtBnU7GdMZ.QXxAzMzwyM0YTN0EzW}
+
+level 27:-
+this task also do not have the local server.
+so run the nc command in that use the 
+nc challenge.localhost 80
+Get / HTTP/1.1
+Host: challenge.localhost then it will give the cookie name and value there.
+then again repeat the same after host add 
+Cookie: <paste the cookie that you got there>
+
+pwn.college{Im_g02h1JuV5IIiwlVtSCS4TEyq.QXyAzMzwyM0YTN0EzW}
+
+Level 28:-
+pyhton do not need to add the cookies manually! using the requests.session() will help.
+import requests
+p = requests.session()                         //in this the p is storing the session details like the cookie number and all.
+r1 = p.get"http://challenge.localhost"
+print("cookie",p.cookies)
+q = p.get("http://challenge.localhost")
+print(q.text)
+
+but in this question the flag is coming automaticaly without knowing or entering the cookies.
+directly by using the get .
+pwn.college{gsuqZpC1lR4F02Qf4wqjCJl4-wB.QXzAzMzwyM0YTN0EzW}
 
 
+Level 29:-
+the above same method applies for any number of cookies.
+
+but the in this level also there is only 1 cookie.
+
+pwn.college{k3PvMY7oMeWAeuxFCd0Wm_nLtgl.QX2AzMzwyM0YTN0EzW}
 
 
+Level 30:-
 
+in this level we should create a webserver using the old server codes and should modify the port to 1337(some ports need the root user permissions)
+and also make some changes to make the server simple.
 
+run the server pyhton3 talk
+in another terminal run /challenge/client
+it will return the flag in the other terminal by sending the query from the present terminal.
+pwn.college{EDgAIVphv9rkIgVejxGt3oBIhZU.0VOzgDNxwyM0YTN0EzW}
+
+here we are actually building a server called talk with the old code with the port no of 1337 and starting the server using the "pyhton3 talk"
+
+then after that we are starting the /challenge/client which is instructed to send a request for the flag.
+that requests are visible in the terminal of the talk server because the terminal is storing the requests that it gets.
+if we try to access the /challenge/client without running the talk server then it will show error that the server is not working stating that 
+there is noone to listen in the port 1337.
+
+level 31:-
+in this there three parts 
+1)make the webserver to redirect to the other server which has the endpoint /attempt.
+
+2)then run the webserver(talk) and run the server (/challenge/server) then open other terminal and run the client (/challenge/client).\
+3) the server will have the flag and when the client tries to send the request to the webserver(talk) then that redirects him to the 
+/challenge/server which have the flag the /challenge/client directly sends the request to the servers for the flag but in the previous case
+he sent the request which itself cointain the flag. 
+
+pwn.college{gKRtfe92Vef7hxvBj7kxMf7gdXO.0FM0gDNxwyM0YTN0EzW}
+
+level 32:-
 
 
 
